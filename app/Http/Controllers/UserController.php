@@ -21,7 +21,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  
         $manageuser = User::where('role_id','!=', \App\Models\User::admin)->paginate(5);
         return view('manageusers', compact(['manageuser']));
     }
