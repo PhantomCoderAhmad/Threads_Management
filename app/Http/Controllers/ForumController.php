@@ -18,7 +18,7 @@ use App\Models\Category;
 class ForumController extends Controller
 {
     //
-    public function forumIndex(Request $request){
+    public function forumIndex(Request $request){ 
         $threads = Thread::orderBy('created_at', 'desc')->take(5)->get();
         $search = $request['search'] ?? "";
         if($search != ""){

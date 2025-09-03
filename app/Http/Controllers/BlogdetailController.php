@@ -16,7 +16,7 @@ class BlogdetailController extends Controller
         $search = $request['search'] ?? "";
         $blog = Blog::with('comments.replies')->where('slug', $slug)->first();
         return view('blogdetail', compact(['blog','search']));
-    }
+    } 
 
     public function manageblog(){
         $manageblog = Blog::paginate(5);
