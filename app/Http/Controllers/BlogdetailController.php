@@ -13,7 +13,7 @@ class BlogdetailController extends Controller
     public function index(Request $request){
         Session::put('redirect', URL::full());
         $slug = $request->slug;
-        $search = $request['search'] ?? "";
+        $search = $request['search'] ?? ""; 
         $blog = Blog::with('comments.replies')->where('slug', $slug)->first();
         return view('blogdetail', compact(['blog','search']));
     } 
