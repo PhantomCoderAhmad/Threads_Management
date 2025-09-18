@@ -30,7 +30,7 @@
       <p>This is a short description of the third blog post.</p>
     </li>
   </ul>
-
+ 
   <h2>Create a New Blog</h2>
   <form>
     <label>Title: <input type="text" name="title"></label><br><br>
